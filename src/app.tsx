@@ -10,13 +10,9 @@ import {
   RegisterPage,
   StripePage,
 } from "./layouts/layouts";
-import { useDispatch } from "react-redux";
-import { AppDispatch } from "~/store/store";
-import { fetch } from "~/store/slices/userSlice";
 import { useNewPostNotification } from "./hooks/useNewPostNotification";
 
 const App: React.FC = () => {
-  const dispatch = useDispatch<AppDispatch>();
   
   useNewPostNotification();
 
