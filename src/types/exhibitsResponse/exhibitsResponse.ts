@@ -1,7 +1,7 @@
 import { Exhibit } from "../types";
 
 export interface ExhibitsResponse {
-  data: Exhibit[];
+  exhibits: Exhibit[];
   total: number;
   page: number;
   lastPage: number;

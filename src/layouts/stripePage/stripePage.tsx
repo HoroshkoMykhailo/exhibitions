@@ -1,5 +1,5 @@
 import { useRequest } from "ahooks";
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { deleteExhibit, fetchExhibits } from "~/api/exhibitActions";
@@ -14,7 +14,7 @@ const StripePage: React.FC = () => {
 
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
-  const page = parseInt(searchParams.get("page") || "1", 10);
+  const page = parseInt(searchParams.get("page") ?? "1", 10);
 
   const { data, loading, error, refresh } = useRequest(
     () => fetchExhibits(page, pageLimit, false),
@@ -45,11 +45,11 @@ const StripePage: React.FC = () => {
     <>
       <ControlBar isAuthenticated={isAuthenticated} />
       <ExhibitsList
-        exhibits={data?.data}
+        exhibits={data?.exhibits}
         loading={loading}
         error={error?.message}
         page={page}
-        lastPage={data?.lastPage || 1}
+        lastPage={data?.lastPage ?? 1}
         onPageChange={handlePageChange}
         onDeleteExhibit={handleDeleteExhibit}
       />

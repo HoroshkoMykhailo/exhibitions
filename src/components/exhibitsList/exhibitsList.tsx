@@ -3,8 +3,6 @@ import { Box, CircularProgress, Typography } from "@mui/material";
 import { Post, Pagination } from "~/components/components";
 import { Colors, HeaderHeight } from "~/constants/constants";
 import { Exhibit } from "~/types/types";
-import { RootState } from "~/store/store";
-import { useSelector } from "react-redux";
 
 interface ExhibitsListProps {
   exhibits: Exhibit[] | undefined;

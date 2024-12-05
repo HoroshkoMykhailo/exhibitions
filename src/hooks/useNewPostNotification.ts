@@ -22,10 +22,10 @@ export const useNewPostNotification = (
         }
       };
   
-      socket.on("newPost", handleNewPost);
+      socket.on("newExhibit", handleNewPost);
   
       return () => {
-        socket.off("newPost", handleNewPost);
+        socket.off("newExhibit", handleNewPost);
       };
     }, [dispatch, page]);
   };

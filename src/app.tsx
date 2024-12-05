@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { CustomAlert, ProtectedRoute } from "~/components/components";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { AppRoute } from "~/constants/constants";

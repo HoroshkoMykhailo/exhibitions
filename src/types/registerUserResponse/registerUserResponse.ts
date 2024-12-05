@@ -1,6 +1,6 @@
 import { User } from "~/types/types";
 
-export interface registerUserResponse extends User {
+export interface RegisterUserResponse extends User {
     password: string;
     isAdmin: boolean;
 }

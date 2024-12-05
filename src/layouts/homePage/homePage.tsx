@@ -1,5 +1,5 @@
 import { useRequest } from "ahooks";
-import React, { useEffect } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import { deleteExhibit, fetchExhibits } from "~/api/exhibitActions";
@@ -42,7 +42,7 @@ const HomePage: React.FC = () => {
     <>
       <ControlBar isAuthenticated={isAuthenticated} myPosts />
       <ExhibitsList
-        exhibits={data?.data}
+        exhibits={data?.exhibits}
         loading={loading}
         error={error?.message}
         page={page}
