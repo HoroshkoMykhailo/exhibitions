@@ -8,6 +8,7 @@ socket.on("connect", () => {
 });
 
 socket.on("connect_error", (error) => {
+  console.log(SocketUrl);
   console.log("Connection Error:", error);
 });
 
